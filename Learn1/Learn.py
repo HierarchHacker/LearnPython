@@ -1,18 +1,15 @@
-print('hello world')
-# 这是单行注释
-print('Hierarch')
-'''多行注释
-哈哈哈'''
-a = 35
-b = 12.345
-c = 'hello world'
-a += b
-print(a)
-a *= b
-print(a)
-print(a != b)
-# 比较运算符的优先级高于赋值运算符
-# 计算年份是否为闰年
-year = int(input('请输入年份：'))
-is_leap_year = year % 4 == 0 and year % 100 != 0 or year % 400 == 0
-print(is_leap_year)
+username = input('Please input your username:')
+password = input('Please input your password:')
+if username == 'Hierarch' and password == '123456':
+    print('Yes!Hierarch,welcome!')
+else:
+    print('What the fuck are you?')
+'''多分支结构'''
+x = float(input('x = '))
+if x > 1:
+    y = 3 * x + 5
+elif x >= -1:
+    y = 4 * x - 3
+else:
+    y = x ** 2 - 213
+print(f'f({x:.3f}) = {y:.4f}')
