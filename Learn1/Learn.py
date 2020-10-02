@@ -1,15 +1,12 @@
-for i in range(1, 10):
-    for j in range(1, i + 1):
-        print(f'{i} * {j} = {i * j}', end='\t')
-    print()
-num = int(input('请输入一个整数：'))
-end = int(num ** 0.5)
-is_prime = True
-for x in range(2, end + 1):
-    if num % x == 0:
-        is_prime = False
-        break
-if is_prime and num != 1:
-    print(f'{num}是素数')
-else:
-    print(f'{num}不是素数')
+for num in range(100, 1000):
+    ge = num % 10
+    shi = num // 10 % 10
+    bai = num // 100
+    if num == ge ** 3 + shi ** 3 + bai ** 3:
+        print(num)
+for x in range(0, 20):
+    for y in range(0, 33):
+        z = 100 - x - y
+        if x * 5 + 3 * y + z == 100:
+            print(x, y, z)
+            
