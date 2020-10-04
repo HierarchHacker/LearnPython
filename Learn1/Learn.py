@@ -1,15 +1,11 @@
-import random
-
-answer = random.randint(1, 11)
-counter = 0
-while True:
-    player = int(input('Please input your answer:'))
-    counter += 1
-    if player < answer:
-        print('Bigger!')
-    elif player > answer:
-        print('Smaller!')
-    else:
-        print('Congratulations!')
+num = int(input('Please input a N*:'))
+end = int(num ** 0.5)
+is_prime = True
+for x in range(2, end + 1):
+    if num % x == 0:
+        is_prime = False
         break
-print(f'Counter = {counter}')
+if is_prime and num != 1:
+    print(f'{num} is prime.')
+else:
+    print(f'{num} is not prime.')
