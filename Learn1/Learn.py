@@ -1,12 +1,15 @@
-for num in range(100, 1000):
-    ge = num % 10
-    shi = num // 10 % 10
-    bai = num // 100
-    if num == ge ** 3 + shi ** 3 + bai ** 3:
-        print(num)
-for x in range(0, 20):
-    for y in range(0, 33):
-        z = 100 - x - y
-        if x * 5 + 3 * y + z == 100:
-            print(x, y, z)
-            
+total = 0
+for x in range(1, 101):
+    total += x
+print(total)
+# 以上为1~100的和
+ou = 0
+for y in range(2, 101, 2):
+    ou += y
+print(ou)
+# 以上为1~100之间偶数的和
+ji = 0
+for z in range(1, 100, 2):
+    ji += z
+print(ji)
+# 以上为1~100奇数的和
