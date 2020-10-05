@@ -28,10 +28,42 @@
 # print(reversed_num)
 # nb，以上为颠倒数字，12345 ==> 54321
 
-for male in range(0, 21):
-    for female in range(0, 34):
-        little = 100 - male - female
-        if male * 5 + female * 3 + little / 3 == 100 and little % 3 == 0:
-            print(f'male:{male},female:{female},little:{little}')
+# for male in range(0, 21):
+#     for female in range(0, 34):
+#         little = 100 - male - female
+#         if male * 5 + female * 3 + little / 3 == 100 and little % 3 == 0:
+#             print(f'male:{male},female:{female},little:{little}')
 # 买鸡题
 
+from random import randint
+
+money = 1000
+while money > 0:
+    print(f'你的资产为：{money}元')
+    go_on = False
+    while True:
+        debt = int(input('请下注:'))
+        if 0 < debt <= money:
+            break
+    first = randint(1, 6) + randint(1, 6)
+    print(f'\n玩家摇出了{first}点')
+    if first == 7 or first == 11:
+        print('玩家胜!\n')
+        money += debt
+    elif first == 2 or first == 3 or first == 12:
+        print('庄家胜!\n')
+    else:
+        go_on = True
+    while go_on:
+        go_on = False
+        current = randint(1, 6) + randint(1, 6)
+        print(f'玩家摇出了{current}点')
+        if current == 7:
+            print('庄家胜！\n')
+            money -= debt
+        elif current == first:
+            print('玩家胜！\n')
+            money += debt
+        else:
+            go_on = True
+print('你破产了！')
