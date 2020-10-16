@@ -67,3 +67,11 @@ while money > 0:
         else:
             go_on = True
 print('你破产了！')
+
+
+# import module
+# import module2
+#
+#
+# module.foo()
+# module2.foo()
